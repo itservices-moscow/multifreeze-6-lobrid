@@ -799,13 +799,41 @@ picture {
 
 @supports (max-width: clamp( 8.5625rem , 0.599089896rem  +  36.4041604755vw , 23.875rem )) {
   .hero__kanistra {
-    max-width: clamp( 8.5625rem , 0.599089896rem  +  36.4041604755vw , 23.875rem );
+    max-width: clamp( 8.5625rem , 0.599089896rem  +  36.4041604755vw + 5vw, 23.875rem );
   }
 }
 
 @supports not (max-width: clamp( 8.5625rem , 0.599089896rem  +  36.4041604755vw , 23.875rem )) {
   .hero__kanistra {
-    max-width: calc(8.5625rem + 15.3125 * (100vw - 21.875rem) / 42.0625);
+    max-width: calc(8.5625rem + 15.3125 * (100vw - 21.875rem) / 42.0625 + 50px);
+  }
+}
+
+.hero {
+  background: url("../img/hero-bg.jpg") center center/cover no-repeat;
+}
+
+@media screen and (max-width: 1270px) {
+  .hero {
+    background: url("../img/hero-bg-tablet.jpg") center bottom/cover no-repeat;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .hero {
+    background: url("../img/hero-bg-tablet-small.jpg") center bottom/cover no-repeat;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero {
+    background: url("../img/hero-bg-mobile.jpg") center bottom/cover no-repeat;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .hero {
+    background: url("../img/hero-bg-mobile-small.jpg") center bottom/cover no-repeat;
   }
 }
 
